@@ -70,3 +70,53 @@ the model admitted that it did not know twice
 
 task 6
 
+task 7
+python ollama/ask_local.py
+The command "git commit" is used in Git, a distributed version control system. It is a part of the Git command-line interface (CLI) that allows developers torecord changes to a project's codebase. When you use the "git commit" command, it creates a commit message and a commit history. This commit history records all the changes made to the codebase since the last commit. It helps in tracking the history of changes, making it easier to understand the evolution of the project over time.
+CompletionUsage(completion_tokens=103, prompt_tokens=36, total_tokens=139, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=3))
+
+python ollama/ask_local.py
+sports fans
+CompletionUsage(completion_tokens=3, prompt_tokens=66, total_tokens=69, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=0))
+
+Commentator uses more prompt_tokens for the same question because it uses the system and the message prompt from the earlier model file to answer the questions 
+
+task 8
+{
+"answer": "git commit is used to create a commit message that
+length
+Traceback (most recent call last):
+  File "/Users/aairaagarwal/datasci350-quiz03/ollama/ask_json.py", line 18, in <module>
+    print(json.loads(reply)["answer"])
+          ^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Unterminated string starting at: line 2 column 11 (char 12)
+
+finish_reason is the length 
+
+$ python ollama/ask_json.py   # after raising max_tokens
+{
+"answer": "git commit is used to create a commit message that
+length
+Traceback (most recent call last):
+  File "/Users/aairaagarwal/datasci350-quiz03/ollama/ask_json.py", line 18, in <module>
+    print(json.loads(reply)["answer"])
+          ^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Unterminated string starting at: line 2 column 11 (char 12)
