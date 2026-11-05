@@ -100,23 +100,22 @@ Traceback (most recent call last):
                ^^^^^^^^^^^^^^^^^^^^^^
 json.decoder.JSONDecodeError: Unterminated string starting at: line 2 column 11 (char 12)
 
-finish_reason is the length 
+finish_reason is the length. It failed because max_tokens was too small, so the model was cut off before closing the JSON string.
 
-$ python ollama/ask_json.py   # after raising max_tokens
-{
-"answer": "git commit is used to create a commit message that
-length
-Traceback (most recent call last):
-  File "/Users/aairaagarwal/datasci350-quiz03/ollama/ask_json.py", line 18, in <module>
-    print(json.loads(reply)["answer"])
-          ^^^^^^^^^^^^^^^^^
-  File "/opt/anaconda3/lib/python3.12/json/__init__.py", line 346, in loads
-    return _default_decoder.decode(s)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/anaconda3/lib/python3.12/json/decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/anaconda3/lib/python3.12/json/decoder.py", line 353, in raw_decode
-    obj, end = self.scan_once(s, idx)
-               ^^^^^^^^^^^^^^^^^^^^^^
-json.decoder.JSONDecodeError: Unterminated string starting at: line 2 column 11 (char 12)
+task 10
+ubuntu@ip-172-31-21-50:~$ 
+
+
+
+$ sudo apt update
+$ sudo apt install -y python3-pandas python3-matplotlib python3-seaborn
+$ scp -i /Users/aairaagarwal/Downloads/quiz-03.pem aws/traffic_analysis.py aws/website_traffic.txt ubuntu@3.21.230.87:~/
+$ python3 traffic_analysis.py > results.txt
+$ cat /var/lib/cloud/data/instance-id >> results.txt
+$ sha256sum results.txt > fingerprint.txt
+$ scp -i /Users/aairaagarwal/Downloads/quiz-03.pem ubuntu@3.21.230.87:~/results.txt ubuntu@3.21.230.87:~/fingerprint.txt ubuntu@3.21.230.87:~/traffic_analysis.png aws/
+When an instance is stopped, you stop paying for compute but still pay for the attached EBS storage volume .
+‘I used Claude to understand why I was getting certain errors in my terminal and to recheck some commands I was not sure about. However, I typed all commands myself.’
+$ git add .
+$ git commit -m "Add AWS analysis results"
+$ git push
